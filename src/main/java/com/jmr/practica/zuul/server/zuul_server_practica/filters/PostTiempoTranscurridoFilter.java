@@ -3,16 +3,14 @@ package com.jmr.practica.zuul.server.zuul_server_practica.filters;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
 
+@Slf4j
 @Component
 public class PostTiempoTranscurridoFilter extends ZuulFilter{
-	
-	private static Logger log = LoggerFactory.getLogger(PostTiempoTranscurridoFilter.class);
 
 	@Override
 	public boolean shouldFilter() {

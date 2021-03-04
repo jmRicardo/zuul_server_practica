@@ -30,7 +30,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter{
 		http.authorizeRequests().antMatchers("/api/security/oauth/**").permitAll()
 		.antMatchers(HttpMethod.GET, "/api/strings/stock/all", "/api/users/usuarios").permitAll()
 		.antMatchers("/api/strings/**", "/api/instruments/**", "/api/users/**").hasRole("ADMIN")
-		.anyRequest().authenticated();
+		.anyRequest().denyAll();
 	}
 
 			/*.antMatchers(HttpMethod.GET, "/api/productos/ver/{id}",
